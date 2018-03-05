@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <title>CodeTest</title>
+</head>
+
+<body onload="load()">
+    <header>
+        <nav>
+            <div class="row">
+                <img src="resources/img/logo.png" alt="Birthday logo" class="logo">
+                <img src="resources/img/logo.png" alt="Birthday logo" class="logo-black">
+            </div>
+        </nav>
+        <div class="hero-text-box">
+            <h1>Be happy and smiling always.
+                <br> Happy Birthday!! ... </h1>
+            <a class="btn btn-full " href="#search">I'll search</a>
+            <a class="btn btn-ghost " href="#gall">Show me all</a>
+        </div>
+    </header>
+
+    <section class="section" id="search">
+        <div class="row">
+            <h2>Search Birthday Info</h2>
+        </div>
+        <form class="name-form">
+            <div class="fallbackDatePicker" align="center" style="margin:20px auto">
+                <h4 style="display:inline-block;">Enter name</h4>
+                <input type="text" style="display:inline-block;" id="name">
+                <input type="button" value="Submit" onclick="byNameSearch()" style="display:inline-block;margin:20px auto">
+            </div>
+        </form>
+        <div class="hr-or">
+            <div class="hr-line"></div>
+            <div class="hr-text">
+                <h4>OR</h4>
+            </div>
+            <div class="hr-line"></div>
+        </div>
+        <form class="date-form">
+            <div class="fallbackDatePicker" align="center">
+                <table class="table table-hover ">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Start Date</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Month</td>
+                            <td class="text-center">Year</td>
+                            <td>Day</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select id="smonth" name="smonth">
+                                    <option selected>January</option>
+                                    <option>February</option>
+                                    <option>March</option>
+                                    <option>April</option>
+                                    <option>May</option>
+                                    <option>June</option>
+                                    <option>July</option>
+                                    <option>August</option>
+                                    <option>September</option>
+                                    <option>October</option>
+                                    <option>November</option>
+                                    <option>December</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="syear" name="syear"></select>
+                            </td>
+                            <td>
+                                <select id="sday" name="sday">
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-hover ">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>End Date</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Month</td>
+                            <td class="text-center">Year</td>
+                            <td>Day</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select id="emonth" name="emonth">
+                                    <option selected>January</option>
+                                    <option>February</option>
+                                    <option>March</option>
+                                    <option>April</option>
+                                    <option>May</option>
+                                    <option>June</option>
+                                    <option>July</option>
+                                    <option>August</option>
+                                    <option>September</option>
+                                    <option>October</option>
+                                    <option>November</option>
+                                    <option>December</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="eyear" name="eyear"></select>
+                            </td>
+                            <td>
+                                <select id="eday" name="eday">
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <input type="button" value="Submit" onclick="byDates()">
+            </div>
+        </form>
+    </section>
+    <section class="section" id="search">
+        <div class="row" id="heading"></div>
+        <ul class=" results clearfixs" id="results1"></ul>
+        <ul class="results clearfixs" id="results2"></ul>
+        <ul class="results clearfixs" id="results3"></ul>
+    </section>
+
+
+    <section class="section-gallery" id="gall">
+        <div class="row">
+            <h2>Birthday Gallery</h2>
+        </div>
+        <ul class="gallery-showcase clearfix" id="gall1">
+
+        </ul>
+        <ul class="gallery-showcase clearfix" id="gall2">
+
+        </ul>
+        <ul class="gallery-showcase clearfix" id="gall3">
+
+        </ul>
+    </section>
+
+
+    <section class="section-testimonials">
+        <div class="row">
+            <h2>Our best wishes are with everyone</h2>
+        </div>
+        <div class="row">
+            <blockquote>
+                Sending you smiles for every moment of your special day…Have a wonderful time and a very happy birthday!
+                <cite>- Omkar Patil</cite>
+            </blockquote>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="row">
+            <ul class="footer-nav">
+                <li>
+                    <a href="#">About us</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+                <li>
+                    <a href="#">Press</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="resources/js/myscript.js"></script>
+    <script src="resources/js/endyear.js"></script>
+    <script src="resources/js/startyear.js"></script>
+</body>
+
+</html>
