@@ -5,9 +5,7 @@ function load() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      console.log(this.responseText);
       data = JSON.parse(this.responseText);
-      console.log(data);
       var gallery1 = document.getElementById("gall1");
       var gallery2 = document.getElementById("gall2");
       var gallery3 = document.getElementById("gall3");
@@ -38,23 +36,18 @@ function byNameSearch() {
   var results1 = document.getElementById('results1');
   if (flag == 1) {
     var headt = document.getElementById('headt');
-    console.log(headt);
     heading.removeChild(headt);
     var responsiven = document.getElementById('responsiven');
-    console.log(responsiven);
     results1.removeChild(responsiven);
     flag = 0;
   }
   var name = document.getElementById('name').value;
-  console.log(name);
-
   var h2 = document.createElement('h2');
   h2.innerHTML = "Search Results";
   h2.setAttribute("id", "headt");
 
   for (i = 0; i < data.length; i++) {
     if (data[i].name == name) {
-      console.log(data[i]);
       var responsive = document.createElement('li');
       responsive.classList.add('responsiven');
       responsive.setAttribute('id', 'responsiven');
@@ -101,9 +94,6 @@ function byDates() {
   sdate = sdate.concat(smonth, ' ', sday, ', ', syear);
   var edate = '';
   edate = edate.concat(emonth, ' ', eday, ', ', eyear);
-  console.log(sdate);
-  console.log(edate);
-
   var d1 = Date.parse(sdate);
   var d2 = Date.parse(edate);
   var results1 = document.getElementById("results1");
@@ -116,7 +106,6 @@ function byDates() {
   for (i = 0; i < data.length; i++) {
     var datetemp = Date.parse(data[i].birthday);
     if (d2 <= datetemp && datetemp <= d1) {
-      console.log(data[i]);
       var results = document.getElementById('results');
       var responsive = document.createElement('li');
       responsive.classList.add('responsive');
